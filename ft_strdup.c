@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 18:03:42 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/15 18:39:46 by mamendes         ###   ########.fr       */
+/*   Created: 2026/04/15 23:15:04 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/15 23:50:02 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+char *ft_strdup(const char *s)
 {
-	if(c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+    int		i;
+	char	*dest;
+
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+    dest = malloc(sizeof (char) * (ft_strlen(s) + 1));
+    if(dest == NULL)
+    {
+        return (NULL);
+    }
+	ft_strlcpy(dest, s, ft_strlen(s) + 1);
+	return (dest);
 }
-/* int main()
+
+/* #include <stdio.h>
+
+int main()
 {
-	char *str = "OlA AmiGoS";
-	char *str1 = malloc(sizeof(char) * 11);
-	str1[10] = '\0';
-	int i = 0;
-	while(str[i])
-	{
-		str1[i] = ft_toupper(str[i]);
-		i++;
-	}
-	printf("%s\n", str1);
-	free(str1);
+    char *str = "ola amigos";
+    char *dest = ft_strdup(str);
+    printf("%s\n", dest);
+    free(dest);
 } */

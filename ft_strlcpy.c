@@ -28,3 +28,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 	}
 	return (ft_strlen(src));
 }
+/* int main()
+{
+	char *src = "ola adeus";
+	char *dest = malloc(sizeof(char) * 11);
+	ft_strlcpy(dest, src, 6);
+	printf("%s", dest);
+} */

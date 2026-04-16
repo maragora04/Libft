@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 18:03:42 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/15 18:39:46 by mamendes         ###   ########.fr       */
+/*   Created: 2026/04/15 22:53:45 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/15 23:12:01 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	if(c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
-/* int main()
-{
-	char *str = "OlA AmiGoS";
-	char *str1 = malloc(sizeof(char) * 11);
-	str1[10] = '\0';
-	int i = 0;
-	while(str[i])
+    size_t i;
+    unsigned char *s_copy;
+
+	i = 0;
+    s_copy = (unsigned char *)s;
+	while(s_copy[i] && i < n)
 	{
-		str1[i] = ft_toupper(str[i]);
+		if(s_copy[i] == c)
+		{
+			return((char *)(s + i));
+		}
 		i++;
 	}
-	printf("%s\n", str1);
-	free(str1);
+	return (NULL);
+}
+
+/* #include <stdio.h>
+
+int main()
+{
+   char *s = "agfkhgdlaifhjsfgskdjf"; 
+   printf("%s\n", (char *)ft_memchr(s, 'i', 5));
 } */

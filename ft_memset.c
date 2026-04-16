@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "string.h"
 
 void    *ft_memset(void *b, int c, size_t len)
 {
@@ -25,3 +26,13 @@ void    *ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+/* int main()
+{
+	char *str = malloc(sizeof(char) * 11);
+	str[10] = '\0';
+	ft_memcpy(str, "ahsgdshgf", 10);
+	ft_memset(str, 'g', 5);
+	printf("%s\n", str);
+	free(str);
+} */

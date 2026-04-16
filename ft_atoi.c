@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:32:16 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/09 19:27:07 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/15 17:52:54 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isspace(int c)
 {
-	if(c >= 7 || c <= 13)
+	if((c >= 7 && c <= 13) || c ==  ' ')
 		return (1);
 	return (0);
 }
@@ -27,14 +27,15 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (ft_isspace)
+	while (str[i] && ft_isspace(str[i]))
 		i++;
-	if (sign == '-' || sign == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (sign == '-')
+		if (str[i] == '-')
 			sign = -1;
 		i++;
 	}	
+	
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
 		result = result * 10 + (str[i] - '0');
@@ -42,3 +43,9 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+/* int main()
+
+{
+	char *str = "     -1234";
+	printf("%d\n", ft_atoi(str));
+} */

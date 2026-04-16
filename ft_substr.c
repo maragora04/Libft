@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 18:03:42 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/15 18:39:46 by mamendes         ###   ########.fr       */
+/*   Created: 2026/04/16 01:46:03 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/16 02:05:30 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if(c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+    int i;
+    char *str;
+    size_t s_len;
+
+    i = 0;
+    len = ft_strlen(str);
+    s_len = ft_strlen(s);
+    if(s == NULL)
+        return (NULL);
+    if(start > s_len)
+        return (ft_strdup(""));
+    if(start + len > s_len)
+    {
+        
+    }
 }
-/* int main()
-{
-	char *str = "OlA AmiGoS";
-	char *str1 = malloc(sizeof(char) * 11);
-	str1[10] = '\0';
-	int i = 0;
-	while(str[i])
-	{
-		str1[i] = ft_toupper(str[i]);
-		i++;
-	}
-	printf("%s\n", str1);
-	free(str1);
-} */

@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 18:15:31 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/09 18:23:11 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/15 19:22:43 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,10 @@ size_t ft_strlen(const char *s)
 	i = 0;
 	while(s[i])
 		i++;
-	return(i);
+	return (i);
 }
+/* int main()
+{
+	char *str = "bablabla blebleble blublublu";
+	printf("%ld\n", ft_strlen(str));
+} */

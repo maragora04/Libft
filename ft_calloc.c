@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/15 23:51:08 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/16 03:13:01 by mamendes         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void *ft_calloc(size_t nmemb, size_t size)
+{
+    void *ptr;
+    
+    if(nmemb == 0 || size == 0)
+        return (NULL);
+    if(nmemb * size > 2147483647)
+        return (NULL);
+    ptr = malloc(nmemb * size);
+    if(ptr == NULL)
+        return (NULL);
+    ft_memset(ptr, 0, nmemb * size);
+    return(ptr);
+}
+
+/* #include <stdio.h>
+int main()
+{
+    int *arr;
+    arr = ft_calloc(5, sizeof(int));
+    int i = 0;
+    while(i < 5)
+    {     
+        printf("%d\n", arr[i]);
+        i++;
+    }
+    free(arr);
+} */
