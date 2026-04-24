@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 23:15:04 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/24 15:39:55 by mamendes         ###   ########.fr       */
+/*   Created: 2026/04/24 18:12:27 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/24 18:41:06 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    int		i;
-	char	*dest;
-
+	int i;
+	
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-    dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if(dest == NULL)
-    {
-        return (NULL);
-    }
-	ft_strlcpy(dest, s, ft_strlen(s) + 1);
-	return (dest);
+	while(s[i])
+	{
+		f(i, s);
+		i++;
+	}
+}
+/* static void ft_toupper2(unsigned int i, char *c)
+{
+	if(c[i] >= 'a' && c[i] <= 'z')
+	{
+		*(c + i) -= 32;
+	}
 }
 
-/* #include <stdio.h>
-
+#include <stdio.h>
 int main()
 {
-    char *str = "ola amigos";
-    char *dest = ft_strdup(str);
-    printf("%s\n", dest);
-    free(dest);
-} */
+	char *s = ft_strdup("asdkaJGHGJHGGhd3747zdgdghg");
+	ft_striteri(s, ft_toupper2);
+	printf("%s\n", s);
+	free(s);
+}  */

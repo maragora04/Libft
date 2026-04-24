@@ -6,7 +6,7 @@
 #    By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/15 21:20:50 by mamendes          #+#    #+#              #
-#    Updated: 2026/04/16 03:38:52 by mamendes         ###   ########.fr        #
+#    Updated: 2026/04/24 16:44:07 by mamendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c \
 	  ft_memset.c ft_strchr.c ft_strlcat.c ft_strlcpy.c \
 	   ft_tolower.c ft_toupper.c ft_strncmp.c ft_strnstr.c \
 	   ft_memchr.c ft_strdup.c ft_calloc.c  \
-	   ft_strjoin.c
+	   ft_strjoin.c ft_strtrim.c
 
 OBJ_FILES = $(SRC:.c=.o)
 

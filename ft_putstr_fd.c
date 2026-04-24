@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 23:15:04 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/24 15:39:55 by mamendes         ###   ########.fr       */
+/*   Created: 2026/04/24 18:07:38 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/24 18:08:11 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+void ft_putstr_fd(char *s, int fd)
 {
-    int		i;
-	char	*dest;
-
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-    dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if(dest == NULL)
-    {
-        return (NULL);
-    }
-	ft_strlcpy(dest, s, ft_strlen(s) + 1);
-	return (dest);
+	write(fd, &s, 1);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-    char *str = "ola amigos";
-    char *dest = ft_strdup(str);
-    printf("%s\n", dest);
-    free(dest);
-} */

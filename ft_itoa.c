@@ -6,65 +6,50 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 03:13:26 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/20 19:17:08 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/24 15:21:01 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_convert(int len)
-{
-	char *tmp;
-	
-	tmp = malloc((len + 1) * sizeof(char));
-	if(tmp == NULL)
-		return(NULL);
-	tmp[0] = '0';
-	return(tmp);
-}
-
 static int ft_numlen(int nbr)
 {
-	int count;
-	
-	count = 0;
-	if(count < 0)
-	{
-		nbr = -nbr;
-		count++;
-	}
-	if(nbr == 0)
-	{
-		count++;
-	}
-	while(nbr > 0)
-	{
-		nbr = nbr / 10;
-		count++;
-	}
-	return(count);
+    int count;
+
+    count = 0;
+    if (nbr <= 0)
+        count++;
+    while (nbr != 0)
+    {
+        nbr /= 10;
+        count++;
+    }
+    return (count);
 }
+
 char *ft_itoa(int n)
 {
-	int i;
-    int len;
-	char *nbr;
-	char *res;
-	
-	len = ft_numlen(n);
-	nbr = n;
-	i = 0;
-	if(n == -2147483648)
-	{
-		write(1, "-2147483648\n", 14);
-		return ;
-	}
-	else if (nbr > 0)
-	{
-		res[i] = ft_convert(n);
-        nbr = n / 10;
-        i--;
-		return(res);
-	}
-	return (0);
+    int     len;
+    char    *res;
+    long    nbr;
+
+    nbr = (long)n;
+    len = ft_numlen(n);
+    res = malloc((len + 1) * sizeof(char));
+    if (res == NULL)
+        return (NULL);
+    res[len] = '\0';
+    if (nbr < 0)
+    {
+        res[0] = '-';
+        nbr = -nbr;
+    }
+    if (nbr == 0)
+        res[0] = '0';
+    while (nbr > 0)
+    {
+        res[--len] = '0' + (nbr % 10);
+        nbr /= 10;
+    }
+    return (res);
 }
