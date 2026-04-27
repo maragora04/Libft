@@ -6,15 +6,15 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 16:51:24 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/15 22:39:18 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:47:59 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-	    return (1);
+		return (1);
 	return (0);
 }

@@ -6,15 +6,15 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:10:33 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/09 17:27:57 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:49:53 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-	    return (1);
+		return (1);
 	return (0);
 }

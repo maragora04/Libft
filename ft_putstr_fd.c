@@ -6,13 +6,13 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:07:38 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/24 18:08:11 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 20:08:51 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, &s, 1);
 }

@@ -6,15 +6,15 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:17:41 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/09 17:27:30 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:49:39 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-	    return (1);
+		return (1);
 	return (0);
 }

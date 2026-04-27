@@ -6,13 +6,13 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:11:12 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/24 18:11:47 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 20:08:48 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	write(fd, &n, 1);
 }

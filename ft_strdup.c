@@ -6,25 +6,23 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 23:15:04 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/24 15:39:55 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 20:03:09 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    int		i;
+	int		i;
 	char	*dest;
 
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-    dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if(dest == NULL)
-    {
-        return (NULL);
-    }
+	dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (dest == NULL)
+		return (NULL);
 	ft_strlcpy(dest, s, ft_strlen(s) + 1);
 	return (dest);
 }
@@ -33,8 +31,8 @@ char *ft_strdup(const char *s)
 
 int main()
 {
-    char *str = "ola amigos";
-    char *dest = ft_strdup(str);
-    printf("%s\n", dest);
-    free(dest);
+	char *str = "ola amigos";
+	char *dest = ft_strdup(str);
+	printf("%s\n", dest);
+	free(dest);
 } */

@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:34 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/09 17:17:19 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:47:35 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
-	    return (1);
+		return (1);
 	return (0);
 }

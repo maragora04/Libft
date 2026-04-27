@@ -3,6 +3,6 @@
 
 int main()
 {
-	char *str = "o daniel e um amigo muito escuro";
+	char *str = "nao gosto do escuro";
    printf("%s", ft_strrchr(str, 'e'));
 }

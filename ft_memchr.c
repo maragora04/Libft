@@ -6,24 +6,24 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 22:53:45 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/15 23:12:01 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:59:55 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t i;
-    unsigned char *s_copy;
+	size_t			i;
+	unsigned char	*s_copy;
 
 	i = 0;
-    s_copy = (unsigned char *)s;
-	while(s_copy[i] && i < n)
+	s_copy = (unsigned char *)s;
+	while (s_copy[i] && i < n)
 	{
-		if(s_copy[i] == c)
+		if (s_copy[i] == c)
 		{
-			return((char *)(s + i));
+			return ((char *)(s + i));
 		}
 		i++;
 	}

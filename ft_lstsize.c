@@ -6,22 +6,22 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:04:27 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 18:16:36 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 20:09:52 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int i;
-	t_list *tmp;
-	
+	int		i;
+	t_list	*tmp;
+
 	i = 0;
 	tmp = lst;
-	if(tmp == NULL)
+	if (tmp == NULL)
 		return (0);
-	while(tmp)
+	while (tmp)
 	{
 		tmp = tmp->next;
 		i++;
