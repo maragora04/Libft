@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 18:09:10 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 18:10:09 by mamendes         ###   ########.fr       */
+/*   Created: 2026/04/27 17:58:51 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/27 18:24:47 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+char *ft_strrchr(const char *s, int c)
 {
-	write(fd, &s, 1);
-	write(fd, "\n", 1);
+	int i;
+
+	i = ft_strlen(s) - 1;
+	while(s[i])
+	{
+		if(s[i] == c)
+		{
+			return((char *)(s + i));
+		}
+		i--;
+	}
+	return (NULL);
 }
+/* #include <stdio.h>
+int main()
+{
+	char *str = "o daniel e um amigo muito escuro";
+   printf("%s", ft_strrchr(str, 'e'));
+} */

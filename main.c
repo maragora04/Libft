@@ -1,9 +1,8 @@
 #include "libft.h"
 #include <stdio.h>
 
-/* int main()
+int main()
 {
-	
-   printf();
-   free();
-} */
+	char *str = "o daniel e um amigo muito escuro";
+   printf("%s", ft_strrchr(str, 'e'));
+}

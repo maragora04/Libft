@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstaddfront.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 18:09:10 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 18:10:09 by mamendes         ###   ########.fr       */
+/*   Created: 2026/04/27 16:59:02 by mamendes          #+#    #+#             */
+/*   Updated: 2026/04/27 17:31:28 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	write(fd, &s, 1);
-	write(fd, "\n", 1);
+	if(lst == NULL || new == NULL)
+		return ;
+	new -> next = *lst;
+	*lst = new;
 }

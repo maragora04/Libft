@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 01:46:03 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/16 02:05:30 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/27 18:27:12 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
         return (ft_strdup(""));
     if(start + len > s_len)
     {
-        
+		
     }
+	return (NULL);
 }
