@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 22:53:45 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 19:59:55 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/28 15:07:57 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
+	unsigned int	i;
 	unsigned char	*s_copy;
 
 	i = 0;
@@ -35,5 +35,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 int main()
 {
    char *s = "agfkhgdlaifhjsfgskdjf"; 
-   printf("%s\n", (char *)ft_memchr(s, 'i', 5));
+   printf("%s\n", (char *)ft_memchr(s, '\0', 5));
 } */

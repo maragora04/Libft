@@ -3,6 +3,6 @@
 
 int main()
 {
-	char *str = "nao gosto do escuro";
-   printf("%s", ft_strrchr(str, 'e'));
+   char *s = "agfkhgdlaifhjsfgskdjf"; 
+   printf("%s\n", (char *)ft_memchr(s, '\0', 5));
 }

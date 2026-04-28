@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 01:46:03 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 20:04:00 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/28 14:28:52 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,33 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*str;
-	size_t	s_len;
+	size_t	i;
+	char	*substr;
 
 	i = 0;
-	len = ft_strlen(str);
-	s_len = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
-	if (start > s_len)
+	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	if (start + len > s_len)
-		len = s_len + start;
-	str = ft_calloc(len + 1, sizeof(char));
-	if (str == NULL)
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	substr = ft_calloc(len + 1, sizeof(char));
+	if (substr == NULL)
 		return (NULL);
-	while (i < s_len)
+	while (i < len)
 	{
-		str[i] = s[start + s_len];
+		substr[i] = s[start + i];
 		i++;
 	}
-	return (str);
+	substr[i] = '\0';
+	return (substr);
 }
+/* #include <stdio.h>
+
+int main()
+{
+	char *str = "guh gah geh gih goh guh";
+	char *substr = ft_substr(str, 12, 3);
+	printf("%s", substr);
+	free(substr);
+} */

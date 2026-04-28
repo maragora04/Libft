@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 18:42:34 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 19:52:15 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/28 12:09:32 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*tmp;
 
 	if (lst == NULL || new == NULL)
-		return (NULL);
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;
 		return ;
 	}
-	tmp = ft_lstlast(lst);
+	tmp = ft_lstlast(*lst);
 	tmp->next = new;
 }

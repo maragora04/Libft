@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:09:10 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 20:08:45 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/28 12:27:42 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &s, 1);
+	int i;
+	
+	i = 0;
+	while(s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 	write(fd, "\n", 1);
 }
