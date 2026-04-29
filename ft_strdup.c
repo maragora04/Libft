@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 23:15:04 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 20:03:09 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/29 14:45:34 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		i;
 	char	*dest;
 
-	i = 0;
 	if (s == NULL)
 		return (NULL);
 	dest = malloc(sizeof(char) * (ft_strlen(s) + 1));

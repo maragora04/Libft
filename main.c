@@ -1,8 +1,10 @@
 #include "libft.h"
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-   char *s = "agfkhgdlaifhjsfgskdjf"; 
-   printf("%s\n", (char *)ft_memchr(s, '\0', 5));
+    char str = malloc(12); 
+	ft_memcpy(str, "Hello World", 12);
+	printf("%s\n", str);
+	free(str);
 }

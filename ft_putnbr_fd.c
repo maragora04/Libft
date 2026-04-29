@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:11:12 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/28 14:38:14 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/04/29 16:49:58 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,10 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
+/* #include <stdio.h>
+
+int main()
+{
+	int n = 234;
+	ft_putnbr_fd(n, 1);
+} */
