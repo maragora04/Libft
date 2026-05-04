@@ -1,15 +1,15 @@
 *This project has been created as part of the 42 curriculum by mamendes.*
 
-# libft
+# Libft
 
 ## Description
 
-**libft** is a custom C library built as part of the 42 school curriculum. The goal of this project is to re-implement a selection of standard C library functions (`libc`) from scratch, deepening the understanding of low-level programming, memory management, and data structures.
+**Libft** is a custom C library built as part of the 42 school curriculum. The goal of this project is to re-implement a selection of standard C library functions (`libc`) from scratch, deepening the understanding of low-level programming, memory management, and data structures.
 
 The library is divided into three parts:
 - **Libc functions** — re-implementations of standard functions such as `ft_strlen`, `ft_memcpy`, `ft_strchr`, `ft_atoi`, etc.
 - **Additional functions** — utility functions not found in `libc` but useful for future projects, such as `ft_substr`, `ft_strjoin`, `ft_itoa`, `ft_putstr_fd`, etc.
-- **Bonus — Linked list functions** — a set of functions to manipulate singly linked lists using the `t_list` struct, including `ft_lstnew`, `ft_lstadd_front`, `ft_lstmap`, `ft_lstclear`, etc.
+- **Linked list functions** — a set of functions to manipulate linked lists using the `t_list` struct defined in the `libft.h` file, including `ft_lstnew`, `ft_lstadd_front`, `ft_lstmap`, `ft_lstclear`, etc.
 
 ## Instructions
 
@@ -24,8 +24,8 @@ The library is divided into three parts:
 Clone the repository and run:
 
 ```bash
-git clone https://github.com/mamendes/libft.git
-cd libft
+git clone "42 dot git repo link here" Libft
+cd Libft
 make
 ```
 
@@ -34,13 +34,13 @@ This will generate a `libft.a` static library file.
 
 ### Usage
 
-Include the library in your project at compilation:
+Include the library in your project at compilation to automatically create an a.out file easily:
 
 ```bash
 cc -Wall -Werror -Wextra your_file.c libft.a 
 ```
 
-And include the header in your source files:
+The header is included in all source files:
 
 ```c
 #include "libft.h"
@@ -50,7 +50,7 @@ And include the header in your source files:
 
 | Rule | Description |
 |------|-------------|
-| `make` | Compiles the mandatory part |
+| `make` | Compiles the Libft library into a `libft.a` file and creates object files for all the functions |
 | `make clean` | Removes object files |
 | `make fclean` | Removes object files and `libft.a` |
 | `make re` | Runs `fclean` then `all` |
