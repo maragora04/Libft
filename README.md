@@ -89,7 +89,7 @@ The header is included in all source files:
 
 | Function | Description |
 |----------|-------------|
-| `ft_substr` | Extracts a "needle" substring from a "haystrack" string |
+| `ft_substr` | Extracts a "needle" substring from a "haystack" string |
 | `ft_strjoin` | Concatenates two strings into a new one |
 | `ft_strtrim` | Trims characters from string edges |
 | `ft_split` | Splits string by delimiter into an array of strings |
@@ -121,10 +121,6 @@ The header is included in all source files:
 - [GNU C Library documentation](https://www.gnu.org/software/libc/manual/)
 - [cppreference.com — C standard library](https://en.cppreference.com/w/c)
 - [42 Docs — libft subject](https://cdn.intra.42.fr/pdf/pdf/960/libft.en.subject.pdf)
-
-### Useful tools
-- [libft-unit-test by alelievr](https://github.com/alelievr/libft-unit-test) — unit tests for libft
-- [francinette](https://github.com/xicodomingues/francinette) — automated tester for 42 projects
 
 ### AI usage
 Claude (claude.ai) was used during this project for the following purposes:
