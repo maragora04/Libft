@@ -15,7 +15,7 @@ The library is divided into three parts:
 
 ### Requirements
 
-- GCC compiler
+- CC compiler
 - `make`
 - A Unix-based system (Linux or macOS)
 
@@ -67,21 +67,21 @@ The header is included in all source files:
 | `ft_isascii` | Checks if character is ASCII |
 | `ft_isprint` | Checks if character is printable |
 | `ft_strlen` | Returns the length of a string |
-| `ft_memset` | Fills memory with a byte value |
+| `ft_memset` | Fills memory with a given byte value |
 | `ft_bzero` | Sets memory to zero |
-| `ft_memcpy` | Copies memory area |
-| `ft_memmove` | Copies memory area (handles overlap) |
+| `ft_memcpy` | Copies a given "source" memory area to "dest" |
+| `ft_memmove` | Moves a given memory area (handles overlap) |
 | `ft_strlcpy` | Size-bounded string copy |
 | `ft_strlcat` | Size-bounded string concatenation |
-| `ft_toupper` | Converts character to uppercase |
-| `ft_tolower` | Converts character to lowercase |
-| `ft_strchr` | Locates character in string |
-| `ft_strrchr` | Locates character in string (from end) |
+| `ft_toupper` | Converts a character to uppercase |
+| `ft_tolower` | Converts a character to lowercase |
+| `ft_strchr` | Locates a character in string |
+| `ft_strrchr` | Locates a character in a string from the end |
 | `ft_strncmp` | Compares two strings up to n bytes |
-| `ft_memchr` | Scans memory for a byte |
+| `ft_memchr` | Scans memory for a given byte |
 | `ft_memcmp` | Compares memory areas |
-| `ft_strnstr` | Locates substring in string |
-| `ft_atoi` | Converts string to integer |
+| `ft_strnstr` | Locates a substring in a string |
+| `ft_atoi` | Converts an ASCII character to integer |
 | `ft_calloc` | Allocates zero-initialized memory |
 | `ft_strdup` | Duplicates a string |
 
@@ -89,31 +89,31 @@ The header is included in all source files:
 
 | Function | Description |
 |----------|-------------|
-| `ft_substr` | Extracts a substring |
+| `ft_substr` | Extracts a "needle" substring from a "haystrack" string |
 | `ft_strjoin` | Concatenates two strings into a new one |
 | `ft_strtrim` | Trims characters from string edges |
-| `ft_split` | Splits string by delimiter into array |
-| `ft_itoa` | Converts integer to string |
-| `ft_strmapi` | Applies function to each char (new string) |
-| `ft_striteri` | Applies function to each char (in place) |
-| `ft_putchar_fd` | Outputs character to file descriptor |
-| `ft_putstr_fd` | Outputs string to file descriptor |
-| `ft_putendl_fd` | Outputs string + newline to fd |
-| `ft_putnbr_fd` | Outputs integer to file descriptor |
+| `ft_split` | Splits string by delimiter into an array of strings |
+| `ft_itoa` | Converts an integer to ASCII character |
+| `ft_strmapi` | Applies a given function to each character (creates a new string) |
+| `ft_striteri` | Applies a given function to each character (in place) |
+| `ft_putchar_fd` | Outputs a character to file descriptor |
+| `ft_putstr_fd` | Outputs a string to file descriptor |
+| `ft_putendl_fd` | Outputs a string + newline to file descriptor |
+| `ft_putnbr_fd` | Outputs an integer to file descriptor |
 
 ### Linked list functions
 
 | Function | Description |
 |----------|-------------|
 | `ft_lstnew` | Creates a new list node |
-| `ft_lstadd_front` | Adds node at the front of the list |
+| `ft_lstadd_front` | Adds a node at the front of the list |
 | `ft_lstsize` | Returns the size of the list |
 | `ft_lstlast` | Returns the last node |
-| `ft_lstadd_back` | Adds node at the back of the list |
+| `ft_lstadd_back` | Adds a node at the back of the list |
 | `ft_lstdelone` | Deletes a single node |
 | `ft_lstclear` | Deletes and frees the entire list |
-| `ft_lstiter` | Applies function to each node |
-| `ft_lstmap` | Applies function and returns new list |
+| `ft_lstiter` | Applies a given function to each node |
+| `ft_lstmap` | Applies a given function and returns a new list |
 
 ## Resources
 
