@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:34:14 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 20:08:20 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:37:02 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	str = ft_calloc((len + 1), (sizeof(char)));
 	if (str == NULL)

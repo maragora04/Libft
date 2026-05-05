@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 19:28:40 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/05 19:55:57 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:01:08 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	ft_lstadd_back(&newlst, new_contents);
 	lst = lst->next;
 	return (newlst);
-}
-#include <stdio.h>
-
-int main()
-{
-	
 }

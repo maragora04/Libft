@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 10:46:39 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/05 19:01:12 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:33:52 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static int	fill_words(char **result, char const *s, char c, int words)
 		{
 			result[j] = get_word(s, c, i);
 			if (result[j] == NULL)
-				return (0);
+				return (full_free(result[j], i), 0);
 			j++;
 			while (s[i] != c && s[i])
 				i++;

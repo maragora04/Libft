@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 14:32:19 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 20:10:56 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:40:21 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	start = 0;
-	end = ft_strlen(s1) - 1;
 	if (s1 == NULL)
 		return (ft_strdup(""));
 	if (set == NULL)
 		return (ft_strdup(s1));
+	end = ft_strlen(s1) - 1;
 	while (what_to_trim(set, s1[start]))
 		start++;
 	if (start == ft_strlen(s1))

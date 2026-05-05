@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 19:12:10 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/05 19:09:12 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:44:02 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
+	//also check this
 	tmp = NULL;
 	while (*lst)
 	{
