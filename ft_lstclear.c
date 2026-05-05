@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 19:12:10 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/29 18:14:01 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:09:12 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,32 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
-	free(lst);
 }
+/* #include <stdio.h>
+
+int main(void)
+{
+	t_list  *lst;
+	t_list  *node;
+
+	lst = ft_lstnew(ft_strdup("one"));
+	node = ft_lstnew(ft_strdup("two"));
+	ft_lstadd_back(&lst, node);
+	node = ft_lstnew(ft_strdup("three"));
+	ft_lstadd_back(&lst, node);
+
+	printf("Before clear: ");
+	while (lst)
+	{
+		printf("%s -> ", (char *)lst->content);
+		lst = lst->next;
+	}
+	printf("NULL\n");
+
+	ft_lstclear(&lst, free);
+
+	printf("After clear: ");
+	if (lst == NULL)
+		printf("NULL\nlst is NULL\n");
+	return (0);
+} */

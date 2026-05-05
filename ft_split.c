@@ -6,17 +6,17 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 10:46:39 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/29 17:27:23 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:01:12 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int  count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
-	int  i;
-	int  k;
-	int  count_words;
+	int	i;
+	int	k;
+	int	count_words;
 
 	count_words = 0;
 	i = 0;
@@ -35,11 +35,11 @@ static int  count_words(char const *s, char c)
 	return (count_words);
 }
 
-static char *get_word(char const *s, char c, int start)
+static char	*get_word(char const *s, char c, int start)
 {
-	int     i;
-	int     end;
-	char    *word;
+	int		i;
+	int		end;
+	char	*word;
 
 	i = 0;
 	end = start;
@@ -58,9 +58,9 @@ static char *get_word(char const *s, char c, int start)
 	return (word);
 }
 
-static void *full_free(char **s, int count)
+static void	*full_free(char **s, int count)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < count)
@@ -72,10 +72,10 @@ static void *full_free(char **s, int count)
 	return (NULL);
 }
 
-static int  fill_words(char **result, char const *s, char c, int words)
+static int	fill_words(char **result, char const *s, char c, int words)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -97,10 +97,10 @@ static int  fill_words(char **result, char const *s, char c, int words)
 	return (1);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char    **result;
-	int     words;
+	char	**result;
+	int		words;
 
 	if (s == NULL)
 		return (NULL);
@@ -112,7 +112,7 @@ char    **ft_split(char const *s, char c)
 		return (full_free(result, words));
 	return (result);
 }
- /* // basic case
+/* // basic case
     ft_split("hello world foo bar", ' ');
 
     // multiple delimiters 
@@ -135,7 +135,7 @@ char    **ft_split(char const *s, char c)
 
     // single character
     ft_split("a", ' '); */
- 
+
 /* int main()
 {
 	char **str = ft_split(":::", ':');

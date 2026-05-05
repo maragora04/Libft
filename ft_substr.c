@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 01:46:03 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/28 14:28:52 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:42:27 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int main()
 {
-	char *str = "guh gah geh gih goh guh";
-	char *substr = ft_substr(str, 12, 3);
+	char *str = "blablablableblebleblublublu";
+	char *substr = ft_substr(str, 13, 3);
 	printf("%s", substr);
 	free(substr);
 } */

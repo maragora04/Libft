@@ -89,7 +89,7 @@ The header is included in all source files:
 
 | Function | Description |
 |----------|-------------|
-| `ft_substr` | Extracts a "needle" substring from a "haystack" string |
+| `ft_substr` | Extracts a substring from a string |
 | `ft_strjoin` | Concatenates two strings into a new one |
 | `ft_strtrim` | Trims characters from string edges |
 | `ft_split` | Splits string by delimiter into an array of strings |

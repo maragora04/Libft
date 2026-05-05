@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:07:38 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/28 12:38:37 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 20:13:40 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		write(fd, &s[i], 1);
 		i++;
 	}
 }
+/* #include <stdio.h>
+
+int main()
+{
+	ft_putstr_fd("hello world", 1);
+} */

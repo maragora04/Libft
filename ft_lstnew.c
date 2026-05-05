@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:47:42 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 20:05:25 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:34:04 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,9 @@ t_list	*ft_lstnew(void *content)
 	elements->next = NULL;
 	return (elements);
 }
+/* #include <stdio.h>
+int main()
+{
+	t_list *lst = ft_lstnew("Hello World");
+	printf("%s\n", (char *)lst->content);
+} */

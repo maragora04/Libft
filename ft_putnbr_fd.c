@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:11:12 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/29 16:49:58 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 20:14:11 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	
-	if (n ==  -2147483648)
+	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
 		return ;
@@ -28,13 +27,13 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n > 9)
 	{
-			ft_putnbr_fd(n / 10, fd);
-			ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
-	else 
+	else
 	{
-			n = n + '0';
-			write(fd, &n, 1);
+		n = n + '0';
+		write(fd, &n, 1);
 	}
 }
 
@@ -42,6 +41,5 @@ void	ft_putnbr_fd(int n, int fd)
 
 int main()
 {
-	int n = 234;
-	ft_putnbr_fd(n, 1);
+	ft_putnbr_fd(234, 1);
 } */

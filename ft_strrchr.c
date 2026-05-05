@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:58:51 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/28 15:00:41 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:41:35 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 /* #include <stdio.h>
 int main()
 {
-	char *str = "o daniel e um amigo muito escuro";
+	char *str = "hello world";
    printf("%s", ft_strrchr(str, 'e'));
 } */

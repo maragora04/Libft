@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 03:13:26 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 19:51:19 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/05 20:29:03 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,11 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
+/* #include <stdio.h>
+
+int main()
+
+{
+	int i = -1234;
+	printf("%s\n", ft_itoa(i));
+} */
