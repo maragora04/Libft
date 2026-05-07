@@ -63,7 +63,7 @@ int main(void)
     ft_memmove(ft + 2, ft, 9);
     memmove(og + 2, og, 9);
     printf("ft_memmove: %s\n", ft);
-    printf("memmove:    %s\n", og);
+    printf("memmove: %s\n", og);
 
     //NULL check
     printf("Test 4 (NULL):\n");
