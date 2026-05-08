@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 21:35:40 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/07 17:22:34 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/08 17:11:50 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ int main()
 	printf("n = 0 test result: %d\n", ft_memcmp("hello", "world", 0));
 	
 	//negative value a < z, first byte
-	printf("neg value, first byte test result:%d\n", ft_memcmp("abc", "zbc", 3));
+	printf("neg val first byte test result:%d\n", ft_memcmp("abc", "zbc", 3));
 	
 	//negative value a < z, last byte
-	printf("neg value, last byte test result: %d\n", ft_memcmp("hella", "hellz", 5));
+	printf("neg value test result: %d\n", ft_memcmp("hella", "hellz", 5));
 	
 	//positive value z > a
 	printf("pos value test result: %d\n", ft_memcmp("hellz", "hella", 5));

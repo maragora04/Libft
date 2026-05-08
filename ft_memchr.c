@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 22:53:45 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/07 18:23:46 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/08 18:17:42 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void    *ft_memchr(const void *s, int c, size_t n)
     unsigned char   *s_copy;
 
     i = 0;
-    if (!s)
-        return (NULL);
     s_copy = (unsigned char *)s;
     while (i < n)
     {

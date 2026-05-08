@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 15:39:45 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/28 14:55:34 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/08 17:29:39 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
+	if(c == '\0')
+		return ((char *)(s + i));
 	return (NULL);
 }
 

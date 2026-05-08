@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 15:23:39 by mamendes          #+#    #+#             */
-/*   Updated: 2026/04/27 20:02:18 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/08 18:13:00 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,36 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (dest_len + src_len);
 }
-/* int main()
+/* 
+#include <bsd/string.h>
+#include <stdio.h>
+int main()
 {
-	char src[4] = "ola";
-	char dest[10] = "adeus";
-	ft_strlcat(src, dest, 10);
-	printf("%s\n", src);
+    //compile with -ldsd
+	//base case
+	char src[] = "ola";
+	char dest[] = "adeus";
+    ft_strlcat(dest, src, 11);
+	printf("base case result: %s\n", dest);
+    char srcog[] = "ola";
+    char destog[] = "adeus";
+    strlcat(destog, srcog, 11);
+	printf("vs og result: %s\n", destog);
+	
+	//size 0 empty strings
+	char src1[] = "";
+	char dest1[] = "";
+    ft_strlcat(dest1, src1, 0);
+	printf("size 0 result: %s\n", dest1);
+    strlcat(dest1, src1, 0);
+	printf("vs og result: %s\n", dest1);
+	printf("print size: %zu\n", ft_strlcat(src1, dest1, 0));
+	
+	//size 0 non empty strings
+	char src2[] = "ola";
+	char dest2[] = "adeus";
+    ft_strlcat(dest2, src2, 0);
+	printf("now non empty str res: %s\n", dest2);
+    strlcat(dest2, src2, 0);
+	printf("vs og res: %s\n", dest2);
 } */

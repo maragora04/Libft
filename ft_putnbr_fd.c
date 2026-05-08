@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 18:11:12 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/05 21:28:04 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/08 18:54:56 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		write(fd, "-", 1);
 		n = -n;
-		ft_putnbr_fd(n, fd);
 	}
 	if (n > 9)
 	{

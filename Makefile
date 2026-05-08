@@ -6,7 +6,7 @@
 #    By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/15 21:20:50 by mamendes          #+#    #+#              #
-#    Updated: 2026/04/28 12:10:06 by mamendes         ###   ########.fr        #
+#    Updated: 2026/05/08 19:00:30 by mamendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,5 +36,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+# bonus: all
 
 .PHONY: all clean fclean re
