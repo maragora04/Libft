@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:58:51 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/08 18:25:26 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/08 19:26:26 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	while (i > -1)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			return ((char *)(s + i));
 		}

@@ -6,7 +6,7 @@
 /*   By: mamendes <mamendes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 21:35:33 by mamendes          #+#    #+#             */
-/*   Updated: 2026/05/08 18:58:53 by mamendes         ###   ########.fr       */
+/*   Updated: 2026/05/08 19:41:43 by mamendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	little_len = ft_strlen(little);
 	while (big[i] && i < len)
 	{
-		if (i + little_len < len && ft_strncmp(little, big + i, little_len) == 0)
+		if (i + little_len <= len \
+&& ft_strncmp(little, big + i, little_len) == 0)
 			return ((char *)big + i);
 		i++;
 	}
